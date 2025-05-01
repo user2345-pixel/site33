@@ -1,125 +1,223 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Downsell - Oferta Final Mini Curso</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #ffffff; /* fundo branco */
-      padding: 20px;
-      color: #333333; /* texto escuro */
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      border: 1px solid #dee2e6; /* borda cinza claro */
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #f8f9fa; /* fundo interno cinza muito claro */
-      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* sombra mais suave */
-    }
-    .preco-antigo { 
-      color: #ff4d4d;
-      font-weight: bold;
-      text-decoration: line-through;
-      font-size: 24px;
-    }
-    .preco-novo { 
-      color: #00e676;
-      font-size: 36px;
-      font-weight: bold;
-    }
-    .garantia {
-      font-weight: bold;
-      color: #555555; /* texto cinza escuro */
-      margin-top: 10px;
-    }
-    .botao-comprar { 
-      background-color: #3dbb3d;
-      color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-    .botao-comprar:hover { 
-      background-color: #2c8f2c;
-    }
-    .conteudo {
-      margin-top: 30px;
-      text-align: left;
-      color: #333333; 
-    }
-    .conteudo p, .conteudo li {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-     .conteudo h3 {
-        margin-top: 20px;
-        color: #3dbb3d; /* Verde para destacar */
-     }
-    hr {
-      border: none;
-      border-top: 1px solid #cccccc; /* linha cinza claro */
-      margin: 30px 0;
-    }
-    ul {
-        list-style: none; /* Remove marcadores padrão */
-        padding-left: 0;
-    }
-    li::before {
-        content: "✔ "; /* Adiciona checkmark verde */
-        color: #3dbb3d;
-        font-weight: bold;
-        margin-right: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Emagrecimento</title>
+    <style>
+        /* Estilos serão adicionados aqui */
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            text-align: center;
+        }
+        .header-warning {
+            background-color: #d9534f; /* Vermelho/Laranja */
+            color: white;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .stop-sign {
+            background-color: #fff;
+            color: #d9534f;
+            border: 5px solid #d9534f;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            font-size: 2em;
+            font-weight: bold;
+            transform: rotate(-15deg);
+        }
+         .stop-sign-octagon {
+            background-color: #d9534f; /* Cor vermelha do sinal de PARE */
+            color: white;
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em; /* Tamanho do texto PARE */
+            font-weight: bold;
+            text-align: center;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+        h1, h2 {
+            color: #eee;
+        }
+        h2.reason-title {
+             background-color: #d9534f; /* Fundo vermelho/laranja */
+             color: white;
+             padding: 10px 20px;
+             display: inline-block; /* Para o fundo se ajustar ao texto */
+             margin-top: 30px;
+             margin-bottom: 20px;
+             font-size: 1.8em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        .price-box {
+            background-color: #fff;
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .price-box .price {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+         .price-box .price-prefix {
+            font-size: 1.2em;
+            vertical-align: top;
+            margin-right: 5px;
+         }
+         .price-box .price-installments {
+            font-size: 1.2em;
+            color: #555;
+         }
+        .price-box .full-price {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 25px;
+        }
+        .cta-button {
+            background-color: #6a0dad; /* Roxo */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Para caso use <a> */
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .cta-button:hover {
+            background-color: #500784;
+        }
+        .decline-link {
+            color: #aaa;
+            font-size: 0.9em;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            color: #aaa;
+            font-size: 0.9em;
+            border-top: 1px solid #444;
+            width: 100%;
+            text-align: center;
+            background-color: #222; /* Fundo do rodapé um pouco diferente */
+        }
+        /* Media Query para Responsividade */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            .header-warning {
+                font-size: 1.2em;
+            }
+             h2.reason-title {
+                font-size: 1.5em;
+             }
+            .price-box {
+                max-width: 90%;
+            }
+            .price-box .price {
+                font-size: 2.8em;
+            }
+            .cta-button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+            .stop-sign-octagon {
+                width: 100px;
+                height: 100px;
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-
-    <div style="text-align: center; padding: 20px 15px; background-color: transparent; border-radius: 10px; margin-bottom: 20px;">
-      <h1 style="font-size: 28px; font-weight: bold; color: #ff4d4d; margin-bottom: 10px;">
-        ESPERE! TEMOS UMA ÚLTIMA OFERTA PARA VOCÊ! ✋
-      </h1>
-      <p style="font-size: 18px; color: #555555;">
-        Entendemos que talvez o valor anterior não fosse o ideal. Que tal levar o <strong>Mini Curso com Planejamento Estratégico</strong> por um preço ainda mais baixo?
-      </p>
+        <div class="header-warning">
+        ESPERE! NÃO FECHE ESSA PÁGINA!
     </div>
 
-    <div class="preco-antigo">DE R$147,00</div>
-    <div class="preco-novo">POR APENAS R$39,90</div>
-    <div class="garantia">ÚLTIMA CHANCE - VALOR REDUZIDO!</div>
-    <button class="botao-comprar">SIM, QUERO APROVEITAR ESTA OFERTA!</button>
+    <div class="container">
+        <div class="stop-sign-octagon">
+            PARE
+        </div>
 
-    <div class="conteudo">
-      <hr>
-      <h3>RELEMBRANDO O QUE VOCÊ GANHA COM O MINI CURSO:</h3>
-      <ul>
-        <li><strong>Planejamento Semanal Detalhado:</strong> Guia passo a passo para organizar suas refeições e rotina.</li>
-        <li><strong>Vídeo-Aulas Exclusivas:</strong> Estratégias avançadas e dicas práticas.</li>
-        <li><strong>Guia de Exercícios Rápidos:</strong> Rotinas curtas e eficazes para fazer em casa.</li>
-        <li><strong>Mentalidade Vencedora:</strong> Técnicas para manter a motivação.</li>
-        <li><strong>Acesso a Materiais Bônus:</strong> Planilhas, checklists e guias.</li>
-      </ul>
-      
-      <p>Este é o mesmo Mini Curso completo oferecido anteriormente, mas com um desconto especial para você não perder a chance de acelerar seus resultados junto com as receitas.</p>
-      
-      <p><strong>Aproveite esta condição única e exclusiva!</strong></p>
-      
-      <hr>
-      
-      <div style="text-align: center;">
-          <button class="botao-comprar">ADICIONAR AO MEU PEDIDO POR R$39,90</button>
-          <p style="margin-top: 15px; font-size: 14px; color: #777;"><a href="#" style="color: #777; text-decoration: underline;">Não, obrigado. Entendo que perderei esta oferta.</a></p> 
-          </div>
+        <h1>OK, ENTENDI QUE VOCÊ QUER EMAGRECER, MAS TALVEZ AINDA NÃO TENHA ENCONTRADO O CAMINHO CERTO, CERTO?</h1>
+
+        <p>Se sim, continue nessa página, porque apenas aqui você irá receber uma condição ainda mais especial para ter acesso ao nosso <strong>Mini Curso de Planejamento de Emagrecimento</strong> por um preço <strong>AINDA MAIS ACESSÍVEL!</strong></p>
+
+        <h2 class="reason-title">POR QUE ESTOU FAZENDO ISSO?</h2>
+
+        <p>Eu realmente quero ajudar você a alcançar seu objetivo de emagrecimento, de forma saudável e sustentável!</p>
+
+        <p>E te digo, que com o <strong>Mini Curso de Planejamento de Emagrecimento</strong>, você terá as ferramentas para organizar sua jornada e potencializar seus resultados rapidamente...</p>
+
+        <p>Apenas com alguns detalhes que você receberá pronto e precisará apenas adaptar à sua rotina.</p>
+
+        <p>Está é minha última oferta pra você acelerar seus resultados e transformar seu corpo e sua saúde em até 10x!</p>
+
+        <p>Estou disposto a ajudar você a conquistar o corpo dos seus sonhos o mais rápido possível, então SIM, eu vou abaixar o preço!</p>
+
+        <p>Você já entendeu que é necessário ter um guia que te ajudará durante todo esse processo. Então, sei que ainda não garantiu sua vaga e esse conteúdo por um valor simbólico! Sendo assim, estou te dando mais uma oportunidade!</p>
+
+        <p>Essa é a primeira e única vez que você terá acesso à menor condição do "Mini Curso de Planejamento de Emagrecimento", por apenas:</p>
+
+        <div class="price-box">
+            <p>Por apenas</p>
+            <div class="price">
+                 R$39,90
+            </div>
+            <p class="full-price">em um único pagamento</p>
+            <a href="#link-pagamento" class="cta-button">QUERO APROVEITAR O DESCONTO!</a>
+            <p class="decline-link">Não, eu gostaria de recusar essa oferta</p>
+        </div>
 
     </div>
-  </div>
+
+    <div class="footer">
+        Seu Nome/Empresa | Todos os direitos reservados
+    </div>
 </body>
 </html>
